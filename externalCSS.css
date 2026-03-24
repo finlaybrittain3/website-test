@@ -71,12 +71,13 @@ nav a:hover {
 
 .page-title {
   font-family: 'Cinzel', serif;
-  font-size: 72px;
+
+  font-size: clamp(36px, 8vw, 72px);
 
   text-align: center;
   margin-top: 10px;
 
-  color: #133074;        /* gold tone */
+  color: #133074;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
@@ -130,4 +131,90 @@ nav a {
   font-family: 'Cinzel', serif;
   letter-spacing: 1px;
   font-weight: 600;
+}
+
+.menu-button {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+
+  .nav-center {
+    display: none;   /* hide links */
+  }
+
+  .menu-button {
+    display: block;  /* show ☰ */
+  }
+
+  .logo {
+    height: 55px;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+}
+
+.menu-button {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  nav {
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    height: 55px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .nav-center {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    text-align: center;
+
+    display: none;  /* hidden by default */
+  }
+
+  .nav-center a {
+    display: block;
+    padding: 15px 0;
+    margin: 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .nav-center.show {
+    display: flex;  /* shown when open */
+  }
+}
+
+@media (max-width: 700px) {
+
+  .content {
+    max-width: 100%;
+    margin: 16px 8px;   /* small side gap */
+    padding: 22px 16px;
+
+    border-radius: 14px;
+  }
+
 }

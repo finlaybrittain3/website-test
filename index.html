@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Wanderer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="externalCSS.css">
     
 </head>
@@ -17,7 +18,7 @@
             </a>
         </div>
 
-        <div class="nav-center">
+        <div class="nav-center" id="navMenu">
             <a href="index.html">Home</a>
             <a href="SecondPage.html">What is Wonderer?</a>
             <a href="Packages.html">Package Options</a>
@@ -25,6 +26,8 @@
         </div>
 
         <div class="nav-right"></div>
+
+        <div class="menu-button" onclick="toggleMenu()">☰</div>
 
     </nav>
  
@@ -40,6 +43,12 @@
 
     </section>
 
+<script>
+function toggleMenu() 
+{
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
