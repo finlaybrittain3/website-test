@@ -170,6 +170,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 0;
 }
 
+  .sabine-photo {
+    width: 200px;      /* adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* centers the image */
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
 
 
 @media (max-width: 700px) {
